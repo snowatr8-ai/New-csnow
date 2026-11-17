@@ -7,32 +7,25 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-14
     steps:
     - uses: actions/checkout@v4
     
-    - name: Select Xcode
-      run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
-      
-    - name: Organize Project Structure
+    - name: Build App
       run: |
-        mkdir -p SNOWLauncher/SNOWLauncher.xcodeproj
-        mkdir -p SNOWLauncher/SNOWLauncher
+        mkdir -p SNOWLauncher/SNOWLauncher.xcodeproj SNOWLauncher/SNOWLauncher
         mv ContentView.swift GyroManager.swift Info.plist MinecraftConfigManager.swift SNOWLauncherApp.swift SNOWLauncher/SNOWLauncher/ || true
         mv project.pbxproj SNOWLauncher/SNOWLauncher.xcodeproj/ || true
-          
-    - name: Build Unsigned App
-      run: |
         cd SNOWLauncher
         xcodebuild -project SNOWLauncher.xcodeproj -scheme SNOWLauncher -configuration Release -sdk iphoneos CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO CONFIGURATION_BUILD_DIR=build
         
-    - name: Package IPA for SideStore
+    - name: Package IPA
       run: |
         mkdir -p Payload
         cp -r SNOWLauncher/build/SNOWLauncher.app Payload/
         zip -r SNOWLauncher_iPad.ipa Payload
         
-    - name: Upload IPA Artifact
+    - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: SNOWLauncher_iPad_IPA
