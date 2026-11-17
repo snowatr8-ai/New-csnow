@@ -1,0 +1,32 @@
+name: Build SNOWLauncher IPA
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Select Xcode
+      run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+      
+    - name: Build Unsigned App
+      run: |
+        cd SNOWLauncher
+        xcodebuild -project SNOWLauncher.xcodeproj -scheme SNOWLauncher -configuration Release -sdk iphoneos CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO CONFIGURATION_BUILD_DIR=build
+        
+    - name: Package IPA for SideStore
+      run: |
+        mkdir -p Payload
+        cp -r SNOWLauncher/build/SNOWLauncher.app Payload/
+        zip -r SNOWLauncher_iPad.ipa Payload
+        
+    - name: Upload IPA Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: SNOWLauncher_iPad_IPA
+        path: SNOWLauncher_iPad.ipa
