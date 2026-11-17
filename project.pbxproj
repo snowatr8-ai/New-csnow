@@ -1,0 +1,172 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000012B0000010000001 /* SNOWLauncherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000012B0000010000001 /* SNOWLauncherApp.swift */; };
+		A10000022B0000010000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000022B0000010000001 /* ContentView.swift */; };
+		A10000032B0000010000001 /* GyroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000032B0000010000001 /* GyroManager.swift */; };
+		A10000042B0000010000001 /* MinecraftConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000042B0000010000001 /* MinecraftConfigManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A00000012B0000010000001 /* SNOWLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNOWLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000012B0000010000001 /* SNOWLauncherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNOWLauncherApp.swift; sourceTree = "<group>"; };
+		A20000022B0000010000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A20000032B0000010000001 /* GyroManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroManager.swift; sourceTree = "<group>"; };
+		A20000042B0000010000001 /* MinecraftConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinecraftConfigManager.swift; sourceTree = "<group>"; };
+		A20000052B0000010000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		B00000012B0000010000001 = {
+			isa = PBXGroup;
+			children = (
+				B00000022B0000010000001 /* SNOWLauncher */,
+				B00000032B0000010000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B00000022B0000010000001 /* SNOWLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				A20000012B0000010000001 /* SNOWLauncherApp.swift */,
+				A20000022B0000010000001 /* ContentView.swift */,
+				A20000032B0000010000001 /* GyroManager.swift */,
+				A20000042B0000010000001 /* MinecraftConfigManager.swift */,
+				A20000052B0000010000001 /* Info.plist */,
+			);
+			path = SNOWLauncher;
+			sourceTree = "<group>";
+		};
+		B00000032B0000010000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A00000012B0000010000001 /* SNOWLauncher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C00000012B0000010000001 /* SNOWLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D00000022B0000010000001 /* Build configuration list for PBXNativeTarget "SNOWLauncher" */;
+			buildPhases = (
+				C10000012B0000010000001 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SNOWLauncher;
+			productName = SNOWLauncher;
+			productReference = A00000012B0000010000001 /* SNOWLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P00000012B0000010000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = D00000012B0000010000001 /* Build configuration list for PBXProject "SNOWLauncher" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ar,
+			);
+			mainGroup = B00000012B0000010000001;
+			productRefGroup = B00000032B0000010000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C00000012B0000010000001 /* SNOWLauncher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C10000012B0000010000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000012B0000010000001 /* SNOWLauncherApp.swift in Sources */,
+				A10000022B0000010000001 /* ContentView.swift in Sources */,
+				A10000032B0000010000001 /* GyroManager.swift in Sources */,
+				A10000042B0000010000001 /* MinecraftConfigManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E00000012B0000010000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E00000022B0000010000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SNOWLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snow.launcher.ipad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D00000012B0000010000001 /* Build configuration list for PBXProject "SNOWLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E00000012B0000010000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D00000022B0000010000001 /* Build configuration list for PBXNativeTarget "SNOWLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E00000022B0000010000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P00000012B0000010000001 /* Project object */;
+}
